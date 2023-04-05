@@ -477,4 +477,20 @@ font-family: 'GoodDog';
     background-size: 1px 60px;
     background-repeat: repeat-y;
     }
+
+    .header .heroContainer  .heroImagesContainer  {
+      margin-top: 70px;
+       
+    }
+
+    .header .heroContainer .heroTextContainer .heroButtonContainer button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 9999px;
+        font-family: 'Effra', sans-serif;
+        background-color: #A8FF35;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        }
 }
