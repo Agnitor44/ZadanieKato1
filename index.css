@@ -1,496 +1,467 @@
-@font-face { font-family: Effra; src: url('./fonts/Effra_Std_Rg.ttf'); }
-@font-face { font-family: GoodDog; src: url('./fonts/GoodDog\ New\ W00\ Regular.ttf'); }
-
+@font-face {
+  font-family: Effra;
+  src: url("./fonts/Effra_Std_Rg.ttf");
+}
+@font-face {
+  font-family: GoodDog;
+  src: url("./fonts/GoodDog\ New\ W00\ Regular.ttf");
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header.header {
-width: 100vw;
-height: 100vh;
-background-color: black;
-display: flex;
-flex-direction: column;
-font-family: 'Effra', sans-serif;
-overflow: hidden;
-
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: "Effra", sans-serif;
+  overflow: hidden;
 }
 
 .header .lineContainer {
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-    display: flex;
-    z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 1;
 }
 
 .header .lineContainer .line {
-    width: 1px;
-    height: 100%;
-    background-color: #2A2A2A;
-    margin: 0 39.5px;
+  width: 1px;
+  height: 100%;
+  background-color: #2a2a2a;
+  margin: 0 39.5px;
 
-    background-image: linear-gradient(black 65%, rgba(255,255,255,0) 0%);
-background-position: right;
-background-size: 1px 60px;
-background-repeat: repeat-y;
+  background-image: linear-gradient(black 65%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 1px 60px;
+  background-repeat: repeat-y;
 }
 
 .header nav {
+  max-width: 1440px;
+  padding: 20px 80px;
+  margin: 0 auto;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header nav .menuButton {
+  display: none;
+}
+
+.header nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.header nav .logo svg {
+}
+.header nav .logo h2 {
+  color: white;
+  margin-left: 10px;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+}
+.header nav .actionContainer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.header nav .innerContainer {
+  display: flex;
+  align-items: center;
+  width: 72%;
+  justify-content: space-between;
+}
+
+.header nav .innerContainer .menuButton {
+  display: none;
+}
+
+.header nav .innerContainer .actionContainer button.login {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.header nav .actionContainer button.register {
+  border: none;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 9999px;
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+.header nav .innerContainer .navContainer {
+  margin-right: 80px;
+}
+
+.header nav .navContainer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav .navContainer ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.header nav .navContainer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.header .heroContainer {
+  color: white;
+  z-index: 1;
+  margin-top: 120px;
+  flex: 1;
+
+  height: auto;
+}
+
+.header .heroContainer .heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.header .heroContainer .heroTextContainer h1 {
+  font-size: 72px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.header .heroContainer .heroTextContainer p {
+  font-size: 18px;
+  color: #8b8b8b;
+  padding-top: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.header .heroContainer .heroTextContainer .heroButtonContainer {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .heroContainer .heroTextContainer .heroButtonContainer button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 9999px;
+  font-family: "Effra", sans-serif;
+  background-color: #a8ff35;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header
+  .heroContainer
+  .heroTextContainer
+  .heroButtonContainer
+  .heroButtonActionCallContainer {
+  position: absolute;
+
+  left: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: rotate(10deg);
+}
+.header
+  .heroContainer
+  .heroTextContainer
+  .heroButtonContainer
+  .heroButtonActionCallContainer
+  p {
+  font-size: 12px;
+  color: white;
+  line-height: 14px;
+  font-family: "GoodDog";
+}
+
+.header .heroContainer .heroImagesContainer {
+  display: flex;
+  margin-top: 95px;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+}
+
+.header .heroContainer .heroImagesContainer img {
+  width: 340px;
+}
+
+.header .heroContainer .heroImagesContainer img:nth-child(1) {
+  transform: rotate(-4deg) translateX(200px);
+  z-index: 9;
+}
+.header .heroContainer .heroImagesContainer img:nth-child(2) {
+  transform: rotate(2deg) translateY(50px) translateX(50px);
+  z-index: 8;
+}
+.header .heroContainer .heroImagesContainer img:nth-child(3) {
+  transform: rotate(-2deg) translateX(-50px);
+  z-index: 7;
+}
+.header .heroContainer .heroImagesContainer img:nth-child(4) {
+  transform: rotate(4deg) translateY(70px) translateX(-120px);
+  z-index: 6;
+}
+
+@media (max-width: 1200px) {
+  header.header {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .header .lineContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 1;
+    height: auto;
+  }
+
+  .header nav {
+    padding: 20px;
+  }
+  .header .heroContainer {
+  }
+
+  .header .heroContainer .heroImagesContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .header .heroContainer .heroImagesContainer img:nth-child(1) {
+    transform: rotate(-4deg) translateY(0);
+    z-index: 9;
+  }
+  .header .heroContainer .heroImagesContainer img:nth-child(2) {
+    transform: rotate(2deg) translateY(-20px);
+    z-index: 8;
+  }
+  .header .heroContainer .heroImagesContainer img:nth-child(3) {
+    transform: rotate(-2deg) translateY(-40px);
+    z-index: 7;
+  }
+  .header .heroContainer .heroImagesContainer img:nth-child(4) {
+    transform: rotate(4deg) translateY(-60px);
+    z-index: 6;
+  }
+
+  .header nav .logo h2 {
+    display: none;
+  }
+
+  .header nav .innerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header nav .navContainer ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+  }
+}
+
+@media (max-width: 950px) {
+  header.header {
+  }
+
+  .header nav .logo h2 {
+    display: none;
+  }
+
+  .header nav .menuButton {
+    display: flex;
+  }
+
+  .header .heroContainer .heroImagesContainer img {
+    width: 290px;
+  }
+
+  .header nav .menuButton button {
+    z-index: 3;
+
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+
+  .header nav .menuButton button.close {
+    display: none;
+  }
+
+  .header .heroContainer .heroTextContainer h1 {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .header .heroContainer .heroTextContainer p {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header .heroContainer {
+    color: white;
+    z-index: 1;
+    margin-top: 60px;
+    flex: 1;
+
+    height: auto;
+  }
+
+  .header nav {
     max-width: 1440px;
-    padding: 20px 80px;
+    padding: 20px;
     margin: 0 auto;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-overflow-x: hidden;
-
-}
-
-.header nav .menuButton {
-   
- display: none;
-}
-
-.header nav .logo  {
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 3;
-
-}
-
-.header nav .logo svg {
-
-
-
-}
-.header nav .logo h2 {
-    color: white;
-    margin-left: 10px;
-    font-size: 24px;
-font-family: 'Inter', sans-serif;
-
-}
-.header nav .actionContainer  {
+    overflow: hidden;
+  }
+  .header nav .innerContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
     display: flex;
-  
-    align-items: center;
-
-
-    justify-content: space-between;
-}
-
-.header nav .innerContainer {
-display: flex;
-align-items: center;
-width: 72%;
-justify-content: space-between;
-}
-
-.header nav .innerContainer .menuButton {
-   
-    display: none;
-
-   }
-
-.header nav .innerContainer .actionContainer button.login {
-    border: none;
-    background-color: transparent;
-    font-size: 18px;
-    color: white;
-    margin-right: 40px;
-cursor: pointer;
-
-}
-
-.header nav .actionContainer  button.register {
-    border: none;
-    font-size: 18px;
-    background-color: white;
-    border-radius: 9999px;
-    padding: 12px 32px;
-cursor: pointer;
-    
-}
-
-.header nav .innerContainer .navContainer {
-  
-   margin-right: 80px; 
-}
-
-.header nav .navContainer ul {
-    display: flex;
-    justify-content: space-between;
-align-items: center;
-    
-}
-
-.header nav .navContainer ul li {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 20px
-    
-}
-
-.header nav .navContainer ul li a {
-   color: white;
-   text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-}
-
-.header .heroContainer {
-    color: white;
-z-index: 1;
-margin-top: 120px;
-flex: 1;
-
-height: auto;
-}
-
-.header .heroContainer .heroTextContainer {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 0 20px;
-
-
-}
-
-.header .heroContainer .heroTextContainer h1 {
-font-size: 72px;
-line-height: 80px;
-text-align: center;
-}
-
-.header .heroContainer .heroTextContainer p {
-font-size: 18px;
-color: #8B8B8B;
-padding-top: 24px;
-line-height: 28px;
-text-align: center;
-}
-
-.header .heroContainer .heroTextContainer .heroButtonContainer {
-margin-top: 40px;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.header .heroContainer .heroTextContainer .heroButtonContainer button {
-padding: 16px 32px;
-border: none;
-border-radius: 9999px;
-font-family: 'Effra', sans-serif;
-background-color: #A8FF35;
-font-weight: 700;
-font-size: 18px;
-cursor: pointer;
-}
-
-.header .heroContainer .heroTextContainer .heroButtonContainer .heroButtonActionCallContainer {
-    position: absolute;
-
-left: 200px;
-width: 200px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-transform: rotate(10deg);
-}
-.header .heroContainer .heroTextContainer .heroButtonContainer .heroButtonActionCallContainer p {
-font-size: 12px;
-color: white;
-line-height: 14px;
-font-family: 'GoodDog';
-}
-
-.header .heroContainer .heroImagesContainer {
-    display: flex;
-    margin-top: 95px;
+    flex-direction: column;
     justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    transition: 0.4s;
+    margin: 0;
+    z-index: 2;
+    padding-top: 150px;
+  }
+  .header nav .innerContainer .navContainer {
+    margin-right: 0;
+  }
+
+  .header nav .innerContainer .navContainer ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    flex-direction: column;
     align-items: center;
-  
-    height: auto;
-}
+    justify-content: center;
+  }
 
-.header .heroContainer  .heroImagesContainer img {
-    width: 340px;
-}
+  .header nav .innerContainer .navContainer ul li {
+    margin: 20px 0;
+  }
+  .header nav .innerContainer .navContainer {
+    margin-left: 0;
+  }
 
-.header .heroContainer  .heroImagesContainer img:nth-child(1) {
-   transform: rotate(-4deg) translateX(200px);
-   z-index: 9;
-   
-}
-.header .heroContainer  .heroImagesContainer img:nth-child(2) {
-    transform: rotate(2deg) translateY(50px) translateX(50px);
-   z-index: 8;
-    
-}
-.header .heroContainer  .heroImagesContainer img:nth-child(3) {
-    transform: rotate(-2deg) translateX(-50px);
-   z-index: 7;
+  .header nav .actionContainer {
+    flex-direction: column;
+  }
+  .header nav .actionContainer button {
+    display: flex;
 
-  
-}
-.header .heroContainer  .heroImagesContainer img:nth-child(4) {
-    transform: rotate(4deg) translateY(70px) translateX(-120px);
-    z-index: 6;
-   
-}
+    align-items: center;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
 
+  .header nav .innerContainer .actionContainer button.login {
+    margin: 0;
+    margin: 20px 0;
+  }
 
-
-@media (max-width: 1200px) {
-    header.header  {
-        
-       position: relative;
-     height: auto;
-        width: 100%;
-     
-    
-    }
-
-    .header .lineContainer {
-        position: absolute;
-        left: 0; right: 0; top: 0; bottom: 0;
-        display: flex;
-        z-index: 1;
-        height: auto;
-    }
-
-    .header nav {
-        
-        padding: 20px;
-  
-    
-    }
-    .header .heroContainer {
-
-    }
-
-    .header .heroContainer .heroImagesContainer {
-   flex-direction: column;
-   height: auto;
-    }
-    .header .heroContainer  .heroImagesContainer img:nth-child(1) {
-        transform: rotate(-4deg) translateY(0);
-        z-index: 9;
-        
-     }
-     .header .heroContainer  .heroImagesContainer img:nth-child(2) {
-         transform: rotate(2deg) translateY(-20px);
-        z-index: 8;
-         
-     }
-     .header .heroContainer  .heroImagesContainer img:nth-child(3) {
-         transform: rotate(-2deg)translateY(-40px);
-        z-index: 7;
-     
-       
-     }
-     .header .heroContainer  .heroImagesContainer img:nth-child(4) {
-         transform: rotate(4deg)translateY(-60px);
-         z-index: 6;
-        
-     }
-
-    
-    .header nav .logo h2 {
-       display:  none;
-    }
-
-    .header nav .innerContainer {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-        }
-
-        .header nav .navContainer ul {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 0;
-            
-            
-        }
-
-
-    
-}
-
-@media (max-width: 950px) {
-
-    header.header {
-     
-       
-  
-        }
-
-        
-    .header nav .logo h2 {
-       display: none;
-    }
-
-    .header nav .menuButton {
-   
-        display: flex;
-       }
-
-       .header .heroContainer .heroImagesContainer img {
-        width: 290px;
-         }
-
-       .header nav .menuButton button {
-        z-index: 3;
-     
-        display: flex;
-        background-color: transparent;
-        border: none;
-       }
-
-       .header nav .menuButton button.close {
-        display: none;
-       }
-
-       .header .heroContainer .heroTextContainer h1 {
-        font-size: 36px;
-        line-height: 40px;
-        text-align: center;
-        }
-
-        .header .heroContainer .heroTextContainer p {
-            font-size: 14px;
-            line-height: 21px;
-            text-align: center;
-            padding-left: 20px;
-            padding-right: 20px;
-            }
-
-            .header .heroContainer {
-                color: white;
-            z-index: 1;
-            margin-top: 60px;
-            flex: 1;
-            
-            height: auto;
-            }
-
-    .header nav {
-   
-        max-width: 1440px;
-        padding: 20px;
-        margin: 0 auto;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        overflow: hidden;
-    }
-    .header nav .innerContainer {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        transition: 0.4s;
-        margin: 0;
-        z-index: 2;
-        padding-top: 150px;
-  
-     }
-     .header nav .innerContainer .navContainer {
-        margin-right: 0; 
-   
-    }
-
-
-     .header nav .innerContainer .navContainer ul  {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header nav .innerContainer .navContainer ul li  {
-  margin: 20px 0;
-    } 
-    .header nav .innerContainer .navContainer {
-        margin-left: 0;
-     
-     }
-
-
-    .header nav .actionContainer {
-      flex-direction: column;
-        
-    }
-    .header nav .actionContainer button  {
-        display: flex;
-        
-        align-items: center;
-        margin: 20px 0;
-        justify-content: space-between;
-    }    
-
-
-    .header nav .innerContainer .actionContainer button.login {
-     margin: 0;
-     margin: 20px 0;
-    }
-
-    .header .heroContainer .heroTextContainer .heroButtonContainer .heroButtonActionCallContainer p {
-       display: none;
-        }
-        .header .heroContainer .heroTextContainer .heroButtonContainer .heroButtonActionCallContainer svg {
-            display: none;
-             }
+  .header
+    .heroContainer
+    .heroTextContainer
+    .heroButtonContainer
+    .heroButtonActionCallContainer
+    p {
+    display: none;
+  }
+  .header
+    .heroContainer
+    .heroTextContainer
+    .heroButtonContainer
+    .heroButtonActionCallContainer
+    svg {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
-    .header .lineContainer .line {
-        width: 1px;
-        height: 100%;
-        background-color: #2A2A2A;
-        margin: 0 29.5px;
+  .header .lineContainer .line {
+    width: 1px;
+    height: 100%;
+    background-color: #2a2a2a;
+    margin: 0 29.5px;
 
-    
-        background-image: linear-gradient(black 65%, rgba(255,255,255,0) 0%);
+    background-image: linear-gradient(black 65%, rgba(255, 255, 255, 0) 0%);
     background-position: right;
     background-size: 1px 60px;
     background-repeat: repeat-y;
-    }
+  }
 
-    .header .heroContainer  .heroImagesContainer  {
-      margin-top: 70px;
-       
-    }
+  .header .heroContainer .heroImagesContainer {
+    margin-top: 70px;
+  }
 
-    .header .heroContainer .heroTextContainer .heroButtonContainer button {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 9999px;
-        font-family: 'Effra', sans-serif;
-        background-color: #A8FF35;
-        font-weight: 700;
-        font-size: 14px;
-        cursor: pointer;
-        }
+  .header .heroContainer .heroTextContainer .heroButtonContainer button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 9999px;
+    font-family: "Effra", sans-serif;
+    background-color: #a8ff35;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
 }
